@@ -50,7 +50,7 @@ app.listen(port, () => {
 });
 
 const MODEL_NAME = "gemini-1.5-pro-latest";
-const API_KEY = "AIzaSyDd0nn2FGR7byhQdFHvzA10qC4E_6ybB24";
+const API_KEY = process.env.API_KEY;
 
 async function runChat(image1, image2) {
     const genAI = new GoogleGenerativeAI(API_KEY);
